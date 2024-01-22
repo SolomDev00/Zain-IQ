@@ -115,7 +115,13 @@ const MainPage = (props: any) => {
         </div>
 
         <form className="form" onSubmit={handleSubmit}>
-          <div style={{ display: "flex", flexDirection: "column" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "start",
+            }}
+          >
             <label style={{ color: "gray", fontWeight: 600, fontSize: 13 }}>
               ادخل رقم الهاتف
             </label>
@@ -162,14 +168,11 @@ const MainPage = (props: any) => {
             <label style={{ color: "red", fontSize: 12 }}>
               {passwordError && passwordError}
             </label>
-          </div>
-          <div
-            style={{
-              width: "100%",
-              marginRight: "20px",
-            }}
-          >
-            <p style={{ textAlign: "right", fontSize: 13 }}>
+            <p
+              style={{
+                fontSize: 13,
+              }}
+            >
               هل نسيت الرمز السري؟
             </p>
           </div>
