@@ -31,7 +31,7 @@ const MainPage = (props: any) => {
       return;
     }
 
-    if (password.length < 6) {
+    if (password.length < 6 && password.length > 4) {
       setPasswordError("كلمة المرور يجب أن تكون على الأقل 6 أحرف");
       return;
     }
@@ -154,13 +154,24 @@ const MainPage = (props: any) => {
               }}
               id="input2"
               type="tel"
-              maxLength={12}
+              minLength={4}
+              maxLength={6}
               required
               onChange={handlePasswordChange}
             />
             <label style={{ color: "red", fontSize: 12 }}>
               {passwordError && passwordError}
             </label>
+          </div>
+          <div
+            style={{
+              width: "100%",
+              marginRight: "20px",
+            }}
+          >
+            <p style={{ textAlign: "right", fontSize: 13 }}>
+              هل نسيت الرمز السري؟
+            </p>
           </div>
           <div>
             <button
