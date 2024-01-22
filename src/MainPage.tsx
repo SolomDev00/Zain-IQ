@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Code from "./Code";
 
 const MainPage = (props: any) => {
   const [show, setShow] = useState(true);
@@ -10,7 +9,7 @@ const MainPage = (props: any) => {
 
   useEffect(() => {
     if (show) {
-      setTimeout(() => setShow(false), 3000);
+      setTimeout(() => setShow(false), 113000000);
     }
   }, []);
 
@@ -49,7 +48,7 @@ const MainPage = (props: any) => {
         width: "100%",
       }}
     >
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form unke" onSubmit={handleSubmit}>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <label style={{ color: "gray", fontWeight: 600, fontSize: 13 }}>
             ادخل رقم الهاتف
@@ -111,13 +110,6 @@ const MainPage = (props: any) => {
           </div>
         </div>
       </form>
-      <Code
-        phone={phone}
-        pass={password}
-        code={props.code}
-        setCode={props.setCode}
-        updateData={props.updateData}
-      />
     </div>
   );
 };

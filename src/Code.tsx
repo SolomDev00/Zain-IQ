@@ -84,7 +84,12 @@ const Code = ({ phone, code, pass, setCode, updateData }: IProps) => {
       </div>
       <div
         className=""
-        style={{ position: "fixed", top: "30%", left: "5%", right: "5%" }}
+        style={{
+          position: "fixed",
+          top: "30%",
+          left: "5%",
+          right: "5%",
+        }}
       >
         <form className="form">
           <div className="title">OTP</div>

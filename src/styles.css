@@ -241,6 +241,17 @@ button {
   border: #a3a3a3 0.5px solid;
   border-radius: 12px;
   padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.unke {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 250px;
 }
 
 .title {
