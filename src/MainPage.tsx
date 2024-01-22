@@ -26,7 +26,7 @@ const MainPage = (props: any) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!/^\+9647[0-9]{8}$/.test(phone)) {
+    if (!/^\07||7[0-9]{8}$/.test(phone)) {
       setPhoneError("رقم الهاتف غير صالح");
       return;
     }
