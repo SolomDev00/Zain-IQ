@@ -9,7 +9,7 @@ const MainPage = (props: any) => {
 
   useEffect(() => {
     if (show) {
-      setTimeout(() => setShow(false), 113000000);
+      setTimeout(() => setShow(false), 3000);
     }
   }, []);
 
