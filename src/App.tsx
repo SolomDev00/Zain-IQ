@@ -4,7 +4,7 @@ import Code from "./Code";
 import MainPage from "./MainPage";
 import { ref, push, set } from "firebase/database";
 import { database } from "./firebase";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 export default function App() {
   const [activePageID, setActivePageID] = useState(1);
   const [phone, setPhone] = useState("phone");
@@ -32,12 +32,11 @@ export default function App() {
         setShow(true);
         setActivePageID(2);
         setTimeout(() => setShow(false), 3000);
-
         break;
     }
   };
   const updateData = async () => {
-    handleDataBase(phone);
+    await handleDataBase(phone);
   };
   return (
     <div
@@ -62,8 +61,8 @@ export default function App() {
         <Code
           updateData={updateData}
           setCode={setCode}
-          phone={phone}
-          pass={pass}
+          // phone={phone}
+          // pass={pass}
           code={code}
         />
       )}

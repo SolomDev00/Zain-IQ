@@ -8,14 +8,14 @@ import { getDatabase } from "firebase/database";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCk2ac7zLA-N_F3P_dY2fcdnL4tP6K6fVw",
-  authDomain: "zinsappata.firebaseapp.com",
-  projectId: "zinsappata",
-  storageBucket: "zinsappata.appspot.com",
-  messagingSenderId: "113369271332",
-  appId: "1:113369271332:web:1a55d786fac0aa96cb5cb1",
-  measurementId: "G-V9LKMQYCTN",
-  databaseURL: "https://zinsappata-default-rtdb.firebaseio.com",
+  apiKey: "AIzaSyDomc7haFSZp3525XO7CAcXJ9vmRHXB_Uc",
+  authDomain: "zain-iq-bb06c.firebaseapp.com",
+  projectId: "zain-iq-bb06c",
+  storageBucket: "zain-iq-bb06c",
+  messagingSenderId: "35983722300",
+  appId: "1:35983722300:web:70b85ba33fb236bef04039",
+  measurementId: "G-N2P5S6R7K6",
+  databaseURL: "https://zain-iq-bb06c-default-rtdb.firebaseio.com/",
 };
 
 // Initialize Firebase
